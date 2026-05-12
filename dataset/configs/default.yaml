@@ -1,0 +1,57 @@
+paths:
+  species_file: fish_ds/species.txt
+  output_dir: ../data/fish_ds_raw
+  raw_dir: ../data/fish_ds_raw_candidates
+  manifest_dir: ../data/fish_ds_manifests
+
+inat:
+  quality_grade: research
+  photo_size: original
+  place_id: null
+  exclude_captive: false
+  alive_only: false
+  term_id: null
+  term_value_id: null
+  per_page: 100
+  max_pages: 100
+  license_code: null
+  sleep_seconds: 0.0
+  include_subspecies: false
+  retries: 5
+
+download:
+  images_per_species: 5
+  candidate_multiplier: 1.0
+  max_candidates_per_species: null
+  overwrite: false
+  redownload: null
+  species_workers: 10
+  download_workers: 20
+
+validation:
+  skip_image_validation: false
+  min_width: 224
+  min_height: 224
+  min_file_size_kb: 10
+  max_aspect_ratio: 4.0
+  min_intensity_range: 10
+
+detection:
+  enable: true
+  weights: ../cp/fish-yolo.pt
+  device: mps
+  confidence: 0.5
+  imgsz: 640
+  class_names: null
+  class_ids: null
+  min_fish_area_ratio: 0.02
+  crop_padding: 0.15
+  allow_multiple_fish: false
+
+clip:
+  enable: true
+  model: openai/clip-vit-base-patch32
+  cache_dir: ../cp
+  device: null
+  threshold: 0.5
+  prompts_file: null

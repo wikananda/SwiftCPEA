@@ -1,0 +1,8 @@
+  root: "data/fish_ds"
+  max_imgs_per_class: null # 'null' to use all images
+  n_way: 5
+  n_shot: 5
+  n_query: 15
+  n_tasks_train: 700
+  n_tasks_val: 400
+  num_workers: 5

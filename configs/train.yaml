@@ -1,0 +1,10 @@
+defaults:
+  - data: dataset
+  - model: swiftcpea
+  - training: default
+  - _self_
+
+paths:
+  logs_dir: "logs"
+  checkpoint_dir: "cp"
+  checkpoint_name: "swiftcpea.pth"

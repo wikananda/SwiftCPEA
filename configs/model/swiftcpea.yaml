@@ -1,0 +1,6 @@
+  backbone_name: "swiftformer_l3.dist_in1k"
+  pretrained: true
+  image_size: 224
+  dropout: 0.5 # dropout inside CPEA's Mlp blocks (fc1 and fc2)
+  feat_dropout: 0.0  # dropout on backbone features before CPEA (0 = disabled)
+  class_aware_factor: 3.0  # λ: how strongly the class token steers patch embeddings (paper default: 2.0)

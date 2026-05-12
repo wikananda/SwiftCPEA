@@ -1,0 +1,11 @@
+defaults:
+  - data: dataset
+  - model: swiftcpea
+  - _self_
+
+paths: 
+  checkpoint_dir: "cp"
+  checkpoint_name: "swiftcpea.pth"
+
+test:
+  n_episodes: 600

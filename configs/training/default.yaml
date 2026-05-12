@@ -1,0 +1,16 @@
+  optimizer: Adam
+  n_epochs: 100
+  warmup_freeze_epochs: 5 # freeze backbone for first N epochs (0 = disabled)
+  label_smoothing: 0.1
+  lr_backbone: 1e-5
+  lr_head: 1e-4
+  momentum: 0.9
+  weight_decay: 1e-2
+  scheduler: CosineAnnealingLR # MultiStepLR, StepLR, CosineAnnealingLR
+  scheduler_eta_min: 1e-7    # CosineAnnealingLR: minimum LR at the end of the cycle
+  scheduler_milestones: [10, 15]  # MultiStepLR fallback
+  scheduler_step_size: 5          # StepLR fallback
+  scheduler_gamma: 0.5            # StepLR / MultiStepLR fallback
+  # Early stopping
+  early_stopping_patience: 15
+  early_stopping_min_delta: 0.001

@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__
+cp/*
+!cp/.gitkeep
+runs/*
+!runs/.gitkeep
+data/*
+!data/.gitkeep
+logs/*
+outputs/*
+.venv/*
+*.log
+wandb/*
+# !runs/configs.yaml
+# !runs/metrics.png
